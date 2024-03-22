@@ -56,13 +56,6 @@ float get_index(string text)
 
 int is_sentence_end(char c, char next, char prev)
 {
-    if (((c == 46 || c == 33 || c == 63) && (next == 32 || next == 0)) ||
-        (c == 34 && (prev == 46 || prev == 33 || prev == 63)))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    return ((c == 46 || c == 33 || c == 63) && (next == 32 || next == 0)) ||
+           (c == 34 && (prev == 46 || prev == 33 || prev == 63));
 }
